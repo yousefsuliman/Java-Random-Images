@@ -14,10 +14,9 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 
 public class JFrameMain extends JFrame {
-
-	private JPanel contentPane;
 	private String []Images= {"1.jpg","2.jpg","4.jpg"};
 	private JLabel lblImage;
+	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -39,16 +38,15 @@ public class JFrameMain extends JFrame {
 	 * Create the frame.
 	 */
 	public JFrameMain() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 812, 559);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
-		lblImage = new JLabel("");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Terminate the program when press the "x" button 
+		setBounds(250, 250, 850, 650);  //set frame/container bounds  x coordinate on the screen 250 and y 250 width 850 and height 650 
+		contentPane = new JPanel(); // construct the panel 
+		contentPane.setBorder(new LineBorder(Color.black,5)); //border panel with black color and 5dp width line 
+		setContentPane(contentPane); //add the panel to the frame 
+		contentPane.setLayout(null); //set layout null 
+		lblImage = new JLabel(""); //construct the label image where i created it in the design with id lblImage
 		lblImage.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblImage.setBounds(41, 12, 745, 505);
+		lblImage.setBounds(120, 120, 822, 551);
 		contentPane.add(lblImage);
 		Timer timer=new Timer(1000, new ActionListener() {
 			@Override
