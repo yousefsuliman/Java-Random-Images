@@ -46,12 +46,16 @@ public class JFrameMain extends JFrame {
 		contentPane.setLayout(null); //set layout null 
 		lblImage = new JLabel(""); //construct the label image where i created it in the design with id lblImage
 		lblImage.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblImage.setBounds(120, 120, 822, 551);
-		contentPane.add(lblImage);
+		lblImage.setBounds(12, 12, 822, 551);
+		contentPane.add(lblImage); // add the label to the panel 
+		
+		/**
+		 * Construct a timer for changing the image with 1 second delay from the array of images
+		 */
 		Timer timer=new Timer(1000, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				int num= (int)(Math.floor(Math.random()*3));
+				int num= (int) (Math.floor(Math.random()*3));
 				String image = Images[num];
 				lblImage.setIcon(new ImageIcon("src//images//"+image));
 			}
