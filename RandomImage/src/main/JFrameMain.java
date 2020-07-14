@@ -56,6 +56,7 @@ public class JFrameMain extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				int num= (int) (Math.floor(Math.random()*3));
+				System.out.println(num);
 				String image = Images[num];
 				lblImage.setIcon(new ImageIcon("src//images//"+image));
 			}
